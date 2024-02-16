@@ -116,6 +116,22 @@
         memory -= currentValue;
         document.getElementById('display').value = '';
     }
+
+    // Eventos de teclado
+    document.addEventListener('keydown', function(event) {
+        const key = event.key;
+        if (key >= '0' && key <= '9') {
+            addToDisplay(key);
+        } else if (key === '.') {
+            addToDisplay(key);
+        } else if (key === '+' || key === '-' || key === '*' || key === '/') {
+            addToDisplay(key);
+        } else if (key === 'Enter') {
+            calculate();
+        } else if (key === 'Backspace') {
+            clearDisplay();
+        }
+    });
 </script>
 
 </body>
