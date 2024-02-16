@@ -33,6 +33,10 @@
         outline: none;
         background-color: #f0f0f0;
     }
+    .calculator input[type="button"].clear {
+        background-color: #007bff; /* Cor azul */
+        color: #fff; /* Texto branco */
+    }
     .calculator input[type="button"]:hover {
         background-color: #e0e0e0;
     }
@@ -57,7 +61,7 @@
 <div class="calculator">
     <input type="text" id="display" disabled>
     <br>
-    <input type="button" value="C" onclick="clearDisplay()">
+    <input type="button" class="clear" value="C" onclick="clearDisplay()">
     <input type="button" value="√" onclick="calculateSquareRoot()">
     <input type="button" value="M+" onclick="addToMemory()">
     <input type="button" value="M-" onclick="subtractFromMemory()">
