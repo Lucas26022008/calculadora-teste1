@@ -138,7 +138,9 @@
         } else if (key === 'Enter') {
             calculate();
         } else if (key === 'Backspace') {
-            clearDisplay();
+            // Apagar o último dígito
+            let displayValue = document.getElementById('display').value;
+            document.getElementById('display').value = displayValue.slice(0, -1);
         }
     });
 </script>
