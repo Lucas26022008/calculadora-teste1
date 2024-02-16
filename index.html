@@ -58,9 +58,7 @@
     <input type="text" id="display" disabled>
     <br>
     <input type="button" value="C" onclick="clearDisplay()">
-    <input type="button" value="M" onclick="showMemory()">
-    <input type="button" value="M+" onclick="addToMemory()">
-    <input type="button" value="M-" onclick="subtractFromMemory()">
+    <input type="button" value="√" onclick="calculateSquareRoot()">
     <input type="button" value="7" onclick="addToDisplay('7')">
     <input type="button" value="8" onclick="addToDisplay('8')">
     <input type="button" value="9" onclick="addToDisplay('9')">
@@ -83,8 +81,6 @@
 </div>
 
 <script>
-    let memory = 0;
-
     function addToDisplay(value) {
         document.getElementById('display').value += value;
     }
@@ -101,20 +97,13 @@
         document.getElementById('display').value = '';
     }
 
-    function showMemory() {
-        document.getElementById('display').value = memory;
-    }
-
-    function addToMemory() {
-        let currentValue = parseFloat(document.getElementById('display').value);
-        memory += currentValue;
-        document.getElementById('display').value = '';
-    }
-
-    function subtractFromMemory() {
-        let currentValue = parseFloat(document.getElementById('display').value);
-        memory -= currentValue;
-        document.getElementById('display').value = '';
+    function calculateSquareRoot() {
+        let value = parseFloat(document.getElementById('display').value);
+        if (value >= 0) {
+            document.getElementById('display').value = Math.sqrt(value);
+        } else {
+            document.getElementById('display').value = 'Erro';
+        }
     }
 
     // Eventos de teclado
