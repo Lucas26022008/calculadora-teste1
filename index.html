@@ -15,7 +15,7 @@
         margin: 0;
     }
     .calculator {
-        width: 400px; /* Maior largura */
+        width: 400px;
         background-color: #fff;
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -23,10 +23,10 @@
         box-sizing: border-box;
     }
     .calculator input[type="button"] {
-        width: 70px; /* Maior largura */
-        height: 70px; /* Maior altura */
+        width: 70px;
+        height: 70px;
         margin: 5px;
-        font-size: 24px; /* Maior tamanho de fonte */
+        font-size: 24px;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -34,17 +34,17 @@
         background-color: #f0f0f0;
     }
     .calculator input[type="button"].clear {
-        background-color: #007bff; /* Cor azul */
-        color: #fff; /* Texto branco */
+        background-color: #007bff; 
+        color: #fff; 
     }
     .calculator input[type="button"]:hover {
         background-color: #e0e0e0;
     }
     .calculator input[type="text"] {
         width: calc(100% - 10px);
-        height: 70px; /* Maior altura */
+        height: 70px; 
         margin-bottom: 10px;
-        font-size: 32px; /* Maior tamanho de fonte */
+        font-size: 32px; 
         text-align: right;
         border: none;
         border-radius: 5px;
@@ -126,7 +126,6 @@
         document.getElementById('display').value = '';
     }
 
-    // Eventos de teclado
     document.addEventListener('keydown', function(event) {
         const key = event.key;
         if (key >= '0' && key <= '9') {
